@@ -4,10 +4,15 @@ class BowlingTurn
     i = 0
     turns = []
     while i < numbered_scores.size do
-      if numbered_scores[i] == 10
+      if numbered_scores[i] == 10 && turns.size < 9
         turns << BowlingTurn.new([10])
         i += 1
         next
+      end
+      # if in the 10th frame, and the last 3 parts
+      if turns.size == 9 && i + 3 == numbered_scores.size
+        turns << BowlingTurn.new([numbered_scores[i], numbered_scores[i+1], numbered_scores[i+2]])
+        break # should be at the end of the loop
       end
       if i + 1 < numbered_scores.size
         turns << BowlingTurn.new([numbered_scores[i], numbered_scores[i+1]])

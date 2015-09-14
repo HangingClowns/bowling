@@ -18,6 +18,12 @@ describe BowlingTurn do
         turns[1].strike?.must_equal true
         turns[2].score.must_equal 4
       end
+      it 'should parse out a perfect game correctly' do
+        turns = BowlingTurn.turns '10,10,10,10,10,10,10,10,10,10,10,10'
+        turns.size.must_equal 10
+        turns[3].score.must_equal 10
+        turns[9].score.must_equal 30
+      end
     end
   end
   describe 'instance' do
