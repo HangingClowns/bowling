@@ -1,5 +1,5 @@
 require 'minitest/autorun'
-require_relative 'bowlingscorer'
+require_relative 'bowling_scorer'
 
 describe BowlingScorer do
   it 'returns 300 when passed a perfect game' do
