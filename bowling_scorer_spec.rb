@@ -14,9 +14,6 @@ describe BowlingScorer do
   it 'returns 50 when passed 10,0,0,9,1,0,0,8,2,0,0,7,3,0,0,6,4,0,0' do
     BowlingScorer.score('10,0,0,9,1,0,0,8,2,0,0,7,3,0,0,6,4,0,0').must_equal 50
   end
-  it 'returns 83 when passed 4,6,3,1,9,1,10,7,3,2,3,4,5,10,2,1' do
-    BowlingScorer.score('4,6,3,1,9,1,10,7,3,2,3,4,5,10,2,1').must_equal 99
-  end
   it 'returns 12 when passed 1,2,8,1' do
     BowlingScorer.score('1,2,8,1').must_equal 12
   end
